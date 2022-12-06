@@ -1,5 +1,3 @@
-
-
 const NavBar = (props) => {
   return (
     <h2 style={{ margin: "1em" }}>
@@ -10,7 +8,6 @@ const NavBar = (props) => {
 };
 
 export default NavBar;
-
 
 // import Container from 'react-bootstrap/Container';
 // import Nav from 'react-bootstrap/Nav';
