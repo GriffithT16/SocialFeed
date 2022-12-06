@@ -1,20 +1,26 @@
 import React, { useState } from "react";
 import CreatePostForm from "./Components/CreatePostForm/CreatePostForm";
 import Post from "./Components/Post/Post";
+import NavBar from "./Components/NavBar/NavBar";
 
 function App() {
+
   const [entries, setEntries] = useState([
-    { name: "Tyler" },
-    { post: "Enter Post Here" },
+    // { name: "" },
+    // { post: "" },
   ]);
+  
+  function addNewPost(entry){
+
+    let tempEntries = [entry, ...entries];
+
+    setEntries(tempEntries);
+  }
 
   return (
     <div>
-        <h3 style={{ margin: "1em" }}>
-          Social
-          <small className="text-muted">Feed</small>
-        </h3>
-      <CreatePostForm />
+      <NavBar />
+      <CreatePostForm addNewPostProperty={addNewPost} />
       <Post parentEntries={entries} />
     </div>
   );

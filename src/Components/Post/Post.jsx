@@ -1,24 +1,29 @@
-
 const Post = (props) => {
-    return ( 
-        <table className="table">
+  return (
+    <table className="table">
+      <thead>
+        <tr>
+          <th>Post</th>
+        </tr>
+      </thead>
+      <tbody>
+        {props.parentEntries.map((entry) => {
+          return (
             <thead>
-            <tr>
-                <th>Post</th>
-            </tr>
+              <tr>
+                <td>{entry.name}</td>
+              </tr>
+              <tr>
+                <td>{entry.post}</td>
+              </tr>
+              <button>Like</button>
+              <button>DisLike</button>
             </thead>
-            <tbody>
-            {props.parentEntries.map((entry, index) => {
-                return (
-                <tr key={index}>
-                    <td>{entry.name}</td>
-                    <td>{entry.post}</td>
-                </tr>
-                );
-                })}
-            </tbody>
-        </table>
-     );
-}
- 
+          );
+        })}
+      </tbody>
+    </table>
+  );
+};
+
 export default Post;
