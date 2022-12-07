@@ -1,23 +1,35 @@
-// import { useState } from 'react';
-// import "./CustomButton.css"
+import { useState } from 'react';
+import "./CustomButton.css"
 
-// const CustomButton = (props) => {
+const CustomButton = (props) => {
 
-//     const [buttonClass, setButtonClass] = useState("inactive");
-
-//     function handleClick(){
+    const [LikeButton, setLikeButton] = useState("inactive");
+    const [DislikeButton, setDisLikeButton] = useState("inactive");
+    function handleLike(){
         
-//         if(buttonClass === "inactive"){
-//             setButtonClass("active");
-//         }else{
-//             setButtonClass("inactive");
-//         }
-//     }
-//         return ( 
-//             <div>
-//                 <button className={buttonClass} onClick={handleClick}>{props.message}</button>
-//             </div>
-//         );
-// }
+        if(LikeButton === "inactive"){
+            setDisLikeButton("inactive");
+            setLikeButton("active");
+        }else{
+            setLikeButton("inactive")
+        }
+    }
+
+    function handleDislike(){
+
+        if(DislikeButton === "inactive"){
+            setLikeButton("inactive");
+            setDisLikeButton("active2")
+        }else{
+            setDisLikeButton("inactive")
+        }
+    }
+        return ( 
+            <div>
+                <button className={LikeButton} onClick={handleLike}>Like</button>
+                <button className={DislikeButton} onClick={handleDislike}>DisLike</button>
+            </div>
+        );
+}
  
-// export default CustomButton
+export default CustomButton

@@ -1,3 +1,6 @@
+import CustomButton from "../CustomButton/CustomButton";
+
+
 const Post = (props) => {
   return (
     <table className="table">
@@ -9,17 +12,16 @@ const Post = (props) => {
       <tbody>
         {props.parentEntries.map((entry) => {
           return (
-            <thead>
+            <tbody>
               <tr>
                 <td>{entry.name}</td>
               </tr>
               <tr>
-                <td>{entry.post}</td>
+                <td className="input-group date">{entry.post}</td>
               </tr>
-              <button type="button" class="btn btn-success">Like</button>
-              <button type="button" class="btn btn-danger">DisLike</button>
-            </thead>
-          );
+                <CustomButton />
+            </tbody>
+          ); 
         })}
       </tbody>
     </table>

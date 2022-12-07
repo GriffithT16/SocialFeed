@@ -7,8 +7,8 @@ import './App.css'
 
 function App() {
   const [entries, setEntries] = useState([
-    // { name: "" },
-    // { post: "" },
+    { name: "" },
+    { post: "" },
   ]);
 
   function addNewPost(entry) {
