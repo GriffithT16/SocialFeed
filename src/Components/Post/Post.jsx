@@ -16,8 +16,8 @@ const Post = (props) => {
               <tr>
                 <td>{entry.post}</td>
               </tr>
-              <button>Like</button>
-              <button>DisLike</button>
+              <button type="button" class="btn btn-success">Like</button>
+              <button type="button" class="btn btn-danger">DisLike</button>
             </thead>
           );
         })}

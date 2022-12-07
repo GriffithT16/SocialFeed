@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import CreatePostForm from "./Components/CreatePostForm/CreatePostForm";
 import Post from "./Components/Post/Post";
 import NavBar from "./Components/NavBar/NavBar";
+import './App.css'
+
 
 function App() {
   const [entries, setEntries] = useState([
@@ -16,10 +18,18 @@ function App() {
   }
 
   return (
-    <div>
-      <NavBar />
-      <CreatePostForm addNewPostProperty={addNewPost} />
-      <Post parentEntries={entries} />
+    <div className="container-fluid">
+      <div className="row">
+        <NavBar />
+        <div className="col-md-6">          
+          <div className="border-box">
+            <CreatePostForm addNewPostProperty={addNewPost} />            
+          </div>
+          <div className="border-box">
+            <Post parentEntries={entries} />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
