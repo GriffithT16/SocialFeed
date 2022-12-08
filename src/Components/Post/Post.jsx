@@ -6,7 +6,7 @@ const Post = (props) => {
     <table className="table">
       <thead>
         <tr>
-          <th>Post</th>
+          <th>SocialFeed Post's</th>
         </tr>
       </thead>
       <tbody>
@@ -17,7 +17,7 @@ const Post = (props) => {
                 <td>{entry.name}</td>
               </tr>
               <tr>
-                <td className="input-group date">{entry.post}</td>
+                <td>{entry.post}</td>
               </tr>
                 <CustomButton />
             </tbody>
@@ -29,3 +29,4 @@ const Post = (props) => {
 };
 
 export default Post;
+

@@ -7,8 +7,8 @@ import './App.css'
 
 function App() {
   const [entries, setEntries] = useState([
-    { name: "" },
-    { post: "" },
+    // { name: "" },
+    // { post: "" },
   ]);
 
   function addNewPost(entry) {
@@ -21,11 +21,11 @@ function App() {
     <div className="container-fluid">
       <div className="row">
         <NavBar />
-        <div className="col-md-6">          
-          <div className="border-box">
+        <div className="col-md-10">          
+          <div className="border-box" style={{'margin-left': '10rem'}}>
             <CreatePostForm addNewPostProperty={addNewPost} />            
           </div>
-          <div className="border-box">
+          <div className="border-box" style={{'margin-left': '10rem'}}>
             <Post parentEntries={entries} />
           </div>
         </div>

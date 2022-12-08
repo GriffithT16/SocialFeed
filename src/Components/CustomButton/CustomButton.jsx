@@ -3,31 +3,31 @@ import "./CustomButton.css"
 
 const CustomButton = (props) => {
 
-    const [LikeButton, setLikeButton] = useState("inactive");
-    const [DislikeButton, setDisLikeButton] = useState("inactive");
+    const [buttonClassLike, setButtonClassLike] = useState("inactive");
+    const [buttonClassDislike, setButtonClassDisLike] = useState("inactive");
     function handleLike(){
         
-        if(LikeButton === "inactive"){
-            setDisLikeButton("inactive");
-            setLikeButton("active");
+        if(buttonClassLike === "inactive"){
+            setButtonClassDisLike("inactive");
+            setButtonClassLike("active");
         }else{
-            setLikeButton("inactive")
+            setButtonClassLike("inactive")
         }
     }
 
     function handleDislike(){
 
-        if(DislikeButton === "inactive"){
-            setLikeButton("inactive");
-            setDisLikeButton("active2")
+        if(buttonClassDislike === "inactive"){
+            setButtonClassLike("inactive");
+            setButtonClassDisLike("active2")
         }else{
-            setDisLikeButton("inactive")
+            setButtonClassDisLike("inactive")
         }
     }
         return ( 
             <div>
-                <button className={LikeButton} onClick={handleLike}>Like</button>
-                <button className={DislikeButton} onClick={handleDislike}>DisLike</button>
+                <button className={buttonClassLike} onClick={handleLike} style={{'margin':'1.5em', 'border-radius': '0.375rem'}}>Like</button>
+                <button className={buttonClassDislike} onClick={handleDislike} style={{'margin':'1.5em', 'border-radius': '0.375rem'}}>DisLike</button>
             </div>
         );
 }
